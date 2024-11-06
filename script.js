@@ -267,3 +267,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // console.log('Done');  
 }
 
+// Нажатие на кнопки Vedi di piu
+document.querySelectorAll('.mybutton').forEach(function(button) {
+    button.addEventListener('click', function() {
+      window.open('https://example.com', '_blank');
+    });
+  });
