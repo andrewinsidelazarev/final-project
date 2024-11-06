@@ -1,0 +1,364 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.bg-image {
+  background-image: url('./images/cover.webp'); /* Укажите путь к вашему изображению */
+  background-size: cover; /* Масштабирование изображения */
+  background-position: center; /* Центрирование изображения */
+  background-repeat: no-repeat; /* Отключение повторения */
+  height: 640px; /* Высота строки */
+}
+
+.text-caps {
+  text-transform: uppercase;
+}
+
+.text-white {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+.text-larger {
+  font-size: 1.5em;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  border-radius: 10px; /* Скругление углов */
+  border: 2px solid black; /* Опционально: чёрная рамка */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+h1{
+  font-size: 48px;
+}
+
+.diagonal-images {
+  position: relative;
+  min-height: 450px;
+  /*max-height: 500px;*/
+}
+
+/* Для мобильных устройств с шириной экрана до 768px */
+@media (max-width: 768px) {
+  .diagonal-images {
+    min-height: 350px;      
+  }
+}
+
+
+/* Для очень маленьких устройств с шириной экрана до 330px */
+@media (max-width: 330px) {
+  .diagonal-images {
+    min-height: 250px;     
+  }
+}
+
+
+.diagonal-images img {
+  max-width: 350px; /* Размер изображений */
+}
+
+.img-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.img-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.img-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.img-4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* Для мобильных устройств с шириной экрана до 768px */
+@media (max-width: 768px) {
+  .img-1, .img-2, .img-3, .img-4 {
+    width: 60%; /* Уменьшаем размер картинок */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+  }
+}
+
+.img-2:hover, .img-4:hover {
+  z-index: 3;  
+}
+
+.img-animation:hover {
+
+  border-radius: 20px;
+  transform: rotate(2deg) scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.big-tittle {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.small-tittle {
+  font-size: 18px;
+  font-weight: 700; 
+}
+
+h3 h4{
+  margin-bottom: 20px;
+}
+
+.background-black {
+
+  background-color: black;
+  color: white;
+
+}
+
+.svg-image {
+  filter: invert(100%);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .svg-image {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.dogs-row {
+  height: 100%;
+  justify-content:flex-end;
+
+}
+
+.dogs-col {
+  display:flex;
+  align-items: center;
+}
+
+
+/* Стили для галереи изображений */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery .col-4 {
+  flex: 1 0 33.33%; /* Три элемента в строке, каждый по 33.33% */
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 5px; /* Добавляем отступы вокруг колонок */
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Чтобы изображения заполняли контейнеры */
+  border-radius: 0; /* Убираем скругление углов */
+  transition: transform 0.3s ease; /* Эффект при наведении */
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* Увеличение при наведении */
+}
+
+/* Адаптивность для планшетов и мобильных */
+@media (max-width: 768px) {
+  .gallery .col-4 {
+      flex: 1 0 50%; /* Два элемента в строке на планшетах */
+      max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery .col-4 {
+      flex: 1 0 100%; /* Один элемент в строке для маленьких экранов */
+      max-width: 100%;
+  }
+}
+
+
+.nav-pos {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 12000;
+}
+
+.line{
+  justify-content: center;
+  background-color: gray;
+  height: 6px;
+  width: 100px;
+}
+
+.max-tittle {
+
+  font-size: 64px;
+}
+
+.middle-tittle {
+
+  font-size: 48px;
+}
+
+.container_tombra {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+  .container_tombra .max-tittle {
+      font-size: 40px;
+  }
+
+  .container_tombra .middle-tittle {
+    font-size: 32px;
+  }
+}
+
+.nav-link {
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+	background-color: black;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.navbar{
+	width: 100%;
+	font-size:30px;
+	background-color:white !important;
+}
+
+.navbar-nav{
+	width: 100%;
+  justify-content: space-around;
+}
+
+navbar-collapse {
+    background-color: white !important; /* Белый фон для мобильного меню */
+}
+
+/* Кнопка прокрутки наверх */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    width: 50px; /* Ширина кнопки */
+    height: 50px; /* Высота кнопки */
+    font-size: 18px;
+    border: 2px solid white; /* Белая рамка */
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%; /* Скругляем края для круглой кнопки */
+    transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #555; /* Цвет при наведении */
+}
+
+/* Контактная форма */
+.form-control, .input-bg {
+  background-color: #2d2d2d; /* Цвет фона как на картинке */
+    border: none;
+    color: #888; /* Цвет текста, как в поле для сообщения */
+    border-radius: 0; /* Убираем скругления */
+}
+.input-bg::placeholder {
+  color: #888; /* Цвет плейсхолдера */
+}
+
+/* Для мобильных устройств */
+@media (max-width: 991px) {
+  .col-lg-5 iframe {
+    height: 400px;
+  }
+}
+
+/* Стили для блока уведомления Coockies */
+#cookie-notice {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+#cookie-notice button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
