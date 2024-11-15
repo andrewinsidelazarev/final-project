@@ -423,6 +423,7 @@
           max-width: 250px;
           text-align: center;
           z-index: 9999;
+          overflow: hidden; /* Это гарантирует, что кнопка останется внутри баннера */
         }
         
         .banner-pubblicitario img {
@@ -446,13 +447,13 @@
         /* Стили для кнопки закрытия */
         .close-btn {
           position: absolute;
-          top: -10px; /* Расстояние от верхнего края */
-          right: -10px; /* Расстояние от правого края */
+          top: 5px; /* Расстояние от верхнего края баннера */
+          right: 5px; /* Расстояние от правого края баннера */
           background-color: red; /* Красный фон */
           border: none;
           border-radius: 50%; /* Круглая форма */
-          width: 30px; /* Ширина кнопки */
-          height: 30px; /* Высота кнопки */
+          width: 52px; /* Увеличенная ширина кнопки (на 75% больше) */
+          height: 52px; /* Увеличенная высота кнопки (на 75% больше) */
           display: flex;
           justify-content: center;
           align-items: center;
@@ -462,8 +463,8 @@
         }
         
         .close-btn svg {
-          width: 18px;
-          height: 18px;
+          width: 28px; /* Увеличенный размер иконки */
+          height: 28px; /* Увеличенный размер иконки */
           fill: white; /* Белый цвет для крестика */
         }
         
