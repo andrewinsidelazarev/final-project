@@ -409,6 +409,7 @@
 
     <!-- Banner -->
     <style>
+        /* Основные стили для баннера */
         .banner-pubblicitario {
           position: fixed;
           bottom: 20px;
@@ -445,23 +446,30 @@
         /* Стили для кнопки закрытия */
         .close-btn {
           position: absolute;
-          top: 5px;
-          right: 5px;
-          background: none;
+          top: -10px; /* Расстояние от верхнего края */
+          right: -10px; /* Расстояние от правого края */
+          background-color: red; /* Красный фон */
           border: none;
-          padding: 0;
+          border-radius: 50%; /* Круглая форма */
+          width: 30px; /* Ширина кнопки */
+          height: 30px; /* Высота кнопки */
+          display: flex;
+          justify-content: center;
+          align-items: center;
           cursor: pointer;
-          z-index: 10000;  /* Убедитесь, что кнопка всегда будет поверх других элементов */
+          z-index: 10000;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень вокруг кнопки */
         }
         
         .close-btn svg {
-          width: 24px;
-          height: 24px;
-          fill: white;  /* Цвет SVG */
+          width: 18px;
+          height: 18px;
+          fill: white; /* Белый цвет для крестика */
         }
         
-        .close-btn:hover svg {
-          fill: red;  /* Цвет при наведении */
+        .close-btn:hover {
+          background-color: darkred; /* Темный красный при наведении */
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Усиленная тень при наведении */
         }
         
         /* Мобильная версия */
