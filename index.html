@@ -421,26 +421,17 @@
           font-size: 14px;
           max-width: 250px;
           text-align: center;
-          z-index: 9999;  
+          z-index: 9999;
         }
         
         .banner-pubblicitario img {
-          width: 100%; /* L'immagine occupa tutta la larghezza del banner */
+          width: 100%;
           height: auto;
           border-top-left-radius: 8px;
           border-top-right-radius: 8px;
-          margin-bottom: 15px; /* Aggiunge uno spazio tra l'immagine e il testo */  
+          margin-bottom: 15px;
         }
         
-        .banner-pubblicitario a {
-          color: #00aaff;
-          text-decoration: none;
-        }
-        
-        .banner-pubblicitario a:hover {
-          text-decoration: underline;
-        }
-
         .banner-pubblicitario a {
           color: yellow;
           text-decoration: none;
@@ -449,21 +440,70 @@
         .banner-pubblicitario a:hover {
           color: yellow;
           text-decoration: underline;
+        }
+        
+        /* Стили для кнопки закрытия */
+        .close-btn {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          background: none;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          z-index: 10000;  /* Убедитесь, что кнопка всегда будет поверх других элементов */
+        }
+        
+        .close-btn svg {
+          width: 24px;
+          height: 24px;
+          fill: white;  /* Цвет SVG */
+        }
+        
+        .close-btn:hover svg {
+          fill: red;  /* Цвет при наведении */
+        }
+        
+        /* Мобильная версия */
+        @media (max-width: 768px) {
+          .banner-pubblicitario {
+            max-width: 90%;
+            left: 5%;
+            bottom: 10px;
+          }
         }
         
     </style>     
 
     <div class="banner-pubblicitario">
-      <a href="https://andrew-lazarev.com/it/videografo-fotografo-montaggio-video/" target="_blank">  
-      <img src="./images/web-svilupatore-andrew-lazarev.webp" alt="Servizi di sviluppo web">
+      <!-- Кнопка закрытия -->
+      <button class="close-btn" onclick="closeBanner()">
+        <!-- SVG иконка закрытия -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M12 10.586L18.707 3.879 17.293 2.464 12 7.757 6.707 2.464 5.293 3.879 10.586 10.586 5.293 17.293 6.707 18.707 12 13.414l5.293 5.293 1.414-1.414L13.414 12z"/>
+        </svg>
+      </button>
+      
+      <!-- Рекламный контент -->
+      <a href="https://andrew-lazarev.com/it/videografo-fotografo-montaggio-video/" target="_blank">
+        <img src="./images/web-svilupatore-andrew-lazarev.webp" alt="Servizi di sviluppo web">
       </a>
-        
+    
       <p>🎯 Sviluppo e SEO di siti web<br>   
         HTML, CSS, Bootstrap, JS<br>
         WordPress + Elementor<br>
         <a href="https://andrew-lazarev.com/it/videografo-fotografo-montaggio-video/">Andrew Lazarev Production</a>
       </p>
     </div>
+
+    
+    <script>
+        function closeBanner() {
+          var banner = document.querySelector('.banner-pubblicitario');
+          banner.style.display = 'none';
+        }
+    </script>    
+    <!-- Banner END -->
 
 
     <!-- Scroll Top button -->
