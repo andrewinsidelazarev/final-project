@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /?*
+Disallow: /*?
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.jpg$
+Disallow: /*.png$
+Disallow: /*.gif$
+Disallow: /*.svg$
+Disallow: /*.woff$
+Disallow: /*.woff2$
+Disallow: /*.ttf$
+Disallow: /*.eot$
+Disallow: /*.json$
+Disallow: /*.txt$
+Disallow: /*.xml$
+Allow: /*.html$
+
+Host: https://final-project-ten-amber.vercel.app
