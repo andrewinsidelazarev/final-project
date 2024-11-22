@@ -16,4 +16,6 @@ Disallow: /*.txt$
 Disallow: /*.xml$
 Allow: /*.html$
 
+Sitemap: https://final-project-ten-amber.vercel.app/sitemap.xml
+
 Host: https://final-project-ten-amber.vercel.app
