@@ -270,6 +270,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // Нажатие на кнопки Vedi di piu
 document.querySelectorAll('.mybutton').forEach(function(button) {
     button.addEventListener('click', function() {
-      window.open('https://andrew-lazarev.com/en/videographer-photographer-video-editor/', '_blank');
+      window.open('https://andrew-lazarev.com/en/', '_blank');
     });
   });
